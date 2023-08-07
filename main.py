@@ -11,7 +11,7 @@ def print_hi(name: str) -> rustworkx.AllPairsPathLengthMapping:
     graph: rustworkx.PyDiGraph = rustworkx.PyDiGraph()
     graph.add_node(6)
     graph.add_node(5)
-    return rustworkx.digraph_all_pairs_dijkstra_path_lengths(graph, [0])  # PyCharm cannot see this method either, instead thinks it's in the package with the digraph/graph specific algorithms
+    return rustworkx.digraph_all_pairs_dijkstra_path_lengths(graph, [0])
 
 
 # Press the green button in the gutter to run the script.
