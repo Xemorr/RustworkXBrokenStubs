@@ -6,12 +6,12 @@ from typing import Dict
 import rustworkx
 
 
-def print_hi(name: str) -> Dict[rustworkx.NodeIndices, rustworkx.NodeIndices]:
+def print_hi(name: str) -> rustworkx.AllPairsPathLengthMapping:
     # Use a breakpoint in the code line below to debug your script.
     graph: rustworkx.PyDiGraph = rustworkx.PyDiGraph()
     graph.add_node(6)
     graph.add_node(5)
-    return rustworkx.digraph_dijkstra_search(graph, [0])  # PyCharm cannot see this method either, instead thinks it's in the package with the digraph/graph specific algorithms
+    return rustworkx.digraph_all_pairs_dijkstra_path_lengths(graph, [0])  # PyCharm cannot see this method either, instead thinks it's in the package with the digraph/graph specific algorithms
 
 
 # Press the green button in the gutter to run the script.
