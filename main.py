@@ -11,7 +11,7 @@ def print_hi(name: str) -> Dict[rustworkx.NodeIndices, rustworkx.NodeIndices]:
     graph: rustworkx.PyDiGraph = rustworkx.PyDiGraph()
     graph.add_node(6)
     graph.add_node(5)
-    return rustworkx.dijkstra_shortest_paths(graph, [0])  # PyCharm cannot see this method either, instead thinks it's in the package with the digraph/graph specific algorithms
+    return rustworkx.digraph_dijkstra_search(graph, [0])  # PyCharm cannot see this method either, instead thinks it's in the package with the digraph/graph specific algorithms
 
 
 # Press the green button in the gutter to run the script.
