@@ -1,14 +1,17 @@
 # This is a sample Python script.
-from typing import Any
+from typing import Dict
 
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import rustworkx
 
 
-def print_hi(name) -> Any:
+def print_hi(name: str) -> Dict[rustworkx.NodeIndices, rustworkx.NodeIndices]:
     # Use a breakpoint in the code line below to debug your script.
-    rustworkx.digraph_dijkstra_search()  # Press Ctrl+F8 to toggle the breakpoint.
+    graph: rustworkx.PyDiGraph = rustworkx.PyDiGraph()
+    graph.add_node(6)
+    graph.add_node(5)
+    return rustworkx.dijkstra_shortest_paths(graph, [0])  # PyCharm cannot see this method either, instead thinks it's in the package with the digraph/graph specific algorithms
 
 
 # Press the green button in the gutter to run the script.
