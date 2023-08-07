@@ -1,12 +1,14 @@
 # This is a sample Python script.
+from typing import Any
 
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import rustworkx
 
-def print_hi(name):
+
+def print_hi(name) -> Any:
     # Use a breakpoint in the code line below to debug your script.
-    rustworkx.digraph_all_pairs_dijkstra_path_lengths()  # Press Ctrl+F8 to toggle the breakpoint.
+    rustworkx.digraph_dijkstra_search()  # Press Ctrl+F8 to toggle the breakpoint.
 
 
 # Press the green button in the gutter to run the script.
